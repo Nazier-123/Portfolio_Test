@@ -20,7 +20,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%);
-    transition: transform 0.2s ease-out;
+    /* Remove transition to avoid janky transitions during drag; use RAF in JS instead. */
+    will-change: transform;
 }
 
 #loading-screen {
